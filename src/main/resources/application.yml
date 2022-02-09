@@ -1,0 +1,25 @@
+server:
+  port: 8000
+
+spring:
+  r2dbc:
+    url: "r2dbc:postgresql://localhost:5432/users"
+    username: psql
+    password: psql
+
+
+  liquibase:
+    enabled: true
+    url: "jdbc:postgresql://localhost:5432/users"
+    user: psql
+    password: psql
+    change-log: "classpath:liquibase/changelog.yml"
+
+jms:
+  url: "tcp://localhost:61616"
+  user: "input"
+  password: "input"
+  concurrency: "1-1"
+
+application:
+  name: "USERSSERVICE"

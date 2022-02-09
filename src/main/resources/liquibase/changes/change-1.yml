@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE-1
+      author: Tiunchik
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: type
+                  type: varchar(100)
+                  constraints:
+                    nulable: false
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nulable: false
+              - column:
+                  name: surname
+                  type: varchar(100)
+                  constraints:
+                    nulable: true
+              - column:
+                  name: position
+                  type: varchar(100)
+                  constraints:
+                    nulable: true
+              - column:
+                  name: email
+                  type: varchar(100)
+                  constraints:
+                    nulable: true
+              - column:
+                  name: login
+                  type: varchar(100)
+                  constraints:
+                    nulable: true
+              - column:
+                  name: password
+                  type: varchar(100)
+                  constraints:
+                    nulable: true
