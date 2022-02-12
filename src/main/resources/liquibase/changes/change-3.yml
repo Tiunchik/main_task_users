@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE-3-1
+      author: Tiunchik
+      changes:
+      - addUniqueConstraint:
+          columnNames: owner_id, employee_id
+          constraintName: stable_relations
+          deferrable: true
+          disabled: true
+          schemaName: public
+          tableName: user_relations
+          validate: true
+
