@@ -13,18 +13,18 @@ class UserController(
 ) {
 
     @GetMapping
-    fun getAllTasks(): Flux<Users> = userCrudService.getAllTasks()
+    fun getAllUsers(): Flux<Users> = userCrudService.getAllUsers()
 
     @GetMapping("/{id}")
-    fun getTask(@PathVariable("id") id: Long): Mono<Users> = userCrudService.getTask(id)
-
-    @PutMapping
-    fun saveTask(@RequestBody users: Users): Mono<Users> = userCrudService.saveTask(users);
+    fun getUser(@PathVariable("id") id: Long): Mono<Users> = userCrudService.getUser(id)
 
     @PostMapping
-    fun updateTask(@RequestBody users: Users): Mono<Users> = userCrudService.updateTask(users)
+    fun saveUser(@RequestBody users: Users): Mono<Users> = userCrudService.saveUser(users);
+
+    @PutMapping
+    fun updateUser(@RequestBody users: Users): Mono<Users> = userCrudService.updateUser(users)
 
     @DeleteMapping("/{id}")
-    fun deleteTask(@PathVariable("id") id: Long): Mono<Void> = userCrudService.deleteTask(id)
+    fun deleteUser(@PathVariable("id") id: Long): Mono<Void> = userCrudService.deleteUser(id)
 
 }

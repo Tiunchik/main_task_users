@@ -10,15 +10,14 @@ class UserCrudService(
     private val userRepository: UserRepository
 ) {
 
-    fun getAllTasks(): Flux<Users> = userRepository.findAll()
+    fun getAllUsers(): Flux<Users> = userRepository.findAll()
 
-    fun getTask(id: Long) = userRepository.findById(id)
+    fun getUser(id: Long) = userRepository.findById(id)
 
-    fun saveTask(users: Users) = userRepository.save(users)
+    fun saveUser(users: Users) = userRepository.save(users)
 
-    fun updateTask(users: Users) = userRepository.save(users)
+    fun updateUser(users: Users) = userRepository.save(users)
 
-    fun deleteTask(id: Long) = userRepository.deleteById(id)
-
+    fun deleteUser(id: Long) = userRepository.deleteById(id)
 
 }
